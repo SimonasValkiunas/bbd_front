@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Service Analizer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .navbar .navbar-nav .sign-out-btn {
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="collector.html">Collect Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tasks.html">Tasks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="export.html">Export Data</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> 
+    <div class="container">   
+      <div class="row">
+          <div class="col-12">
+            <h1 class="mt-4">Web Services</h1>
+            <table class="table table-bordered table-striped" id="web-services-table">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Trust</th>
+                  <th scope="col">Response time (s)</th>
+                  <th scope="col">Availability (%)</th>
+                  <th scope="col">Successability (%)</th>
+                  <th scope="col">Throughput (req/s)</th>
+                  <th scope="col">Reliability (%)</th>
+                  <th scope="col">Details</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Request Setup</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+   .header-row {
+    margin-bottom: 10px;
+  }
+  #terminal {
+    background-color: black;
+    color: lime;
+    white-space: pre-wrap;
+    padding: 10px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    height: 200px;
+  }   
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="collector.html">Collect Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tasks.html">Tasks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="export.html">Export Data</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> 
+  <div class="container">
+    <h1>Set up a request to a web service</h1>
+    <form id="requestForm">
+      <div class="mb-3">
+        <label for="endpoint" class="form-label">Endpoint URL</label>
+        <input type="url" id="endpoint" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="requestBody" class="form-label">Request Body</label>
+        <textarea id="requestBody" class="form-control"></textarea>
+      </div>
+      <div class="mb-3 form-check">
+        <label class="form-check-label" for="startNow">Start collection now</label>
+        <input type="checkbox" class="form-check-input" id="startNow">
+      </div>
+      <div class="mb-3">
+        <label for="startDate" class="form-label">Start Date</label>
+        <input type="datetime-local" id="startDate" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="endDate" class="form-label">End Date</label>
+        <input type="datetime-local" id="endDate" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Request Headers</label>
+        <div id="headersContainer">
+          <div class="header-row" style="display: flex; flex-direction: row;">
+            <select class="form-control header-key">
+              <option value="" selected disabled hidden>Select Header Key</option>
+              <option value="Content-Type">Content-Type</option>
+              <option value="Accept">Accept</option>
+              <option value="Authorization">Authorization</option>
+            </select>
+            <input type="text" class="form-control header-value" placeholder="Header Value">
+          </div>
+        </div>
+        <button type="button" id="addHeader" class="btn btn-secondary">Add Header</button>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Request</button>
+    </form>
+  </div>
+
+  <script src="js/collector.js"></script>
+</body>
+</html>
